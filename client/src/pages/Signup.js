@@ -13,7 +13,6 @@ const Signup = () => {
         password: '',
 
     })
-
     const handleInputChange = (e) => {
         setUserData({ ...userData, [e.target.name]: e.target.value })
     }
@@ -24,9 +23,9 @@ const Signup = () => {
             lastName: userData.lastName,
             email: userData.email,
             password: userData.password,
-
         }).then(res => {
             console.log(res)
+            
         })
     }
 
@@ -86,6 +85,8 @@ const Signup = () => {
                                 value={userData.password}
                             />
                         </Box>
+                        <Button onClick={handleSubmit}>Submit</Button>
+                        
                     </Card>
                 </Grid>
             </Grid>
