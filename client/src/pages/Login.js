@@ -3,7 +3,7 @@ import TextField from '../components/Textfield'
 import { Box, Button, Card, CardActionArea, CardMedia, CardContent, Container, Grid, Typography, CardActions, CardHeader } from '@mui/material'
 import axios from 'axios'
 import { LOGIN_API } from '../constants/Api'
-import {  useNavigate } from 'react-router-dom';
+// import {  useNavigate } from 'react-router-dom';
 
 
 
@@ -16,7 +16,7 @@ const Login = () => {
         password: '',
         userLoginData:''
     })
-    const navgate = useNavigate()
+    // const navgate = useNavigate()
     const handleInputChange = (e) => {
         setUserData({ ...userData, [e.target.name]: e.target.value })
     }
@@ -26,7 +26,7 @@ const Login = () => {
         axios.get(LOGIN_API).then(res => {
             setUserData({...userData,userLoginData : res.data})
             console.log(res.data)
-            navgate('/dashboard')
+            // navgate('/dashboard')
         })
     }
 

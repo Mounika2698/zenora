@@ -60,7 +60,7 @@ const Signup = () => {
                         }}
                         noValidate
                         autoComplete="off"
-                        onSubmit={handleSubmit}
+                        
                     >
                         <Grid container spacing={2}>
                             <Grid item xs={12} sm={6}>
@@ -110,6 +110,7 @@ const Signup = () => {
                             type="submit"
                             fullWidth
                             sx={{ mt: 2 }}
+                            onSubmit={handleSubmit}
                         >
                             Sign Up
                         </Button>
